@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Grandville's premier barbershop. Precision cuts, crisp skin fades, beard trims &amp; hot towel shaves. Walk-ins welcome. Call (616) 485-8187." />
+  <meta name="keywords" content="barbershop grandville michigan, haircut grandville, skin fade grandville, beard trim, hot towel shave, Cindy barber" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Grandville Barbershop" />
+  <meta property="og:title" content="Grandville Barbershop — Precision Cuts &amp; Classic Shaves" />
+  <meta property="og:description" content="Grandville's premier barbershop. Walk-ins welcome. Expert fades, beard trims &amp; hot towel shaves on Chicago Dr SW." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#1a1a1a" />
+  <title>Grandville Barbershop | Precision Cuts &amp; Hot Towel Shaves | Grandville, MI</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Grandville Barbershop",
+    "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80",
+    "telephone": "+16164858187",
+    "url": "",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4390 Chicago Dr SW",
+      "addressLocality": "Grandville",
+      "addressRegion": "MI",
+      "postalCode": "49418",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "186" },
+    "priceRange": "$$",
+    "hasMap": "https://maps.google.com/?q=4390+Chicago+Dr+SW,+Grandville,+MI+49418"
+  }
+  </script>
+
+  <style>
+    /* =============================================
+       RESET & CUSTOM PROPERTIES
+    ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #1a1a1a;
+      --bg-dark:    #111111;
+      --bg-card:    #222222;
+      --text:       #f0f0f0;
+      --text-muted: #999999;
+      --accent:     #c8a45a;
+      --accent-lt:  #e0c070;
+      --accent-dk:  #9e7e3a;
+      --border:     #2e2e2e;
+      --white:      #ffffff;
+      --nav-h:      64px;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    /* allow copy on contact details */
+    address, .allow-select { -webkit-user-select: text; user-select: text; }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      -webkit-user-drag: none;
+      user-drag: none;
+      pointer-events: none;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+    }
+
+    /* =============================================
+       UTILITY
+    ============================================= */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
+
+    .section-label {
+      display: inline-block;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.9rem, 4.5vw, 3rem);
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .section-header { text-align: center; margin-bottom: 3.5rem; }
+
+    .divider {
+      width: 48px; height: 3px;
+      background: var(--accent);
+      margin: 1rem auto 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.9rem 2rem;
+      border-radius: 2px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.28s ease;
+      white-space: nowrap;
+    }
+
+    .btn-gold {
+      background: var(--accent);
+      color: #111;
+      border-color: var(--accent);
+      box-shadow: 0 4px 20px rgba(200,164,90,0.28);
+    }
+    .btn-gold:hover { background: var(--accent-lt); border-color: var(--accent-lt); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(200,164,90,0.38); color: #111; }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.32);
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    /* =============================================
+       TOP RIBBON
+    ============================================= */
+    .ribbon {
+      background: var(--accent);
+      color: #111;
+      text-align: center;
+      padding: 0.6rem 1rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* =============================================
+       NAVIGATION
+    ============================================= */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+      justify-content: space-between;
+      background: rgba(13,13,13,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(200,164,90,0.18);
+      transition: box-shadow 0.3s;
+    }
+    .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.5); }
+
+    .nav-logo {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--text); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links .nav-call {
+      background: var(--accent);
+      color: #111 !important;
+      padding: 0.45rem 1.1rem;
+      font-weight: 700 !important;
+      border-radius: 2px;
+      transition: background 0.25s !important;
+    }
+    .nav-links .nav-call:hover { background: var(--accent-lt) !important; color: #111 !important; }
+
+    /* =============================================
+       HERO
+    ============================================= */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      /* ribbon + nav offset handled via padding-top */
+      padding-top: calc(var(--nav-h) + 38px);
+    }
+
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      transform: scale(1.06);
+      pointer-events: none;
+      will-change: transform;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, rgba(10,10,10,0.88) 0%, rgba(26,26,26,0.72) 55%, rgba(10,10,10,0.90) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+      padding: 2rem 1.5rem 8rem;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(200,164,90,0.12);
+      border: 1px solid rgba(200,164,90,0.45);
+      color: var(--accent);
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      padding: 0.38rem 1.2rem;
+      margin-bottom: 1.6rem;
+      border-radius: 2px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 9vw, 6rem);
+      font-weight: 700;
+      color: var(--white);
+      text-shadow: 0 2px 24px rgba(0,0,0,0.55);
+      margin-bottom: 1.1rem;
+    }
+    .hero h1 .gold { color: var(--accent); }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      color: #b0b0b0;
+      font-weight: 300;
+      max-width: 560px;
+      margin: 0 auto 2.6rem;
+      line-height: 1.75;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* stats strip */
+    .hero-stats {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: rgba(10,10,10,0.7);
+      backdrop-filter: blur(6px);
+    }
+    .stat-item {
+      flex: 1;
+      max-width: 220px;
+      text-align: center;
+      padding: 1.25rem 1rem;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .stat-lbl {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* =============================================
+       SERVICES
+    ============================================= */
+    .services { background: var(--bg-dark); padding: 5rem 0; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .svc-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 2rem 1.75rem;
+      border-radius: 3px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.28s, border-color 0.28s, box-shadow 0.28s;
+    }
+    .svc-card::after {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--accent);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.3s ease;
+    }
+    .svc-card:hover { transform: translateY(-5px); border-color: rgba(200,164,90,0.4); box-shadow: 0 12px 32px rgba(0,0,0,0.35); }
+    .svc-card:hover::after { transform: scaleY(1); }
+
+    .svc-icon { font-size: 2.2rem; margin-bottom: 1.1rem; }
+    .svc-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.55rem;
+      letter-spacing: 0.04em;
+    }
+    .svc-desc { font-size: 0.855rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.4rem; }
+    .svc-price { font-family: 'Oswald', sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--accent); }
+    .svc-note { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+    /* =============================================
+       ABOUT
+    ============================================= */
+    .about { background: var(--bg); padding: 5rem 0; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5rem;
+      align-items: center;
+    }
+
+    .about-img-wrap { position: relative; }
+    .about-img-wrap img {
+      width: 100%; height: 520px;
+      object-fit: cover;
+      border-radius: 3px;
+      filter: grayscale(15%) contrast(1.06);
+      pointer-events: none;
+    }
+    .about-corner {
+      position: absolute;
+      bottom: -1.4rem; right: -1.4rem;
+      width: 170px; height: 170px;
+      border: 3px solid var(--accent);
+      border-radius: 3px;
+      z-index: -1;
+    }
+    .about-badge-img {
+      position: absolute;
+      top: 1.4rem; left: 1.4rem;
+      background: var(--accent);
+      color: #111;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border-radius: 2px;
+    }
+
+    .about-text { padding-right: 0.5rem; }
+    .about-text .section-title { text-align: left; margin-bottom: 1.4rem; }
+    .about-text p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.82; margin-bottom: 1.2rem; }
+
+    .blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.5rem;
+      background: rgba(200,164,90,0.05);
+      border-radius: 0 3px 3px 0;
+      margin: 1.6rem 0;
+    }
+    .blockquote p { font-style: italic; color: var(--text) !important; font-size: 0.88rem !important; margin: 0 !important; line-height: 1.6 !important; }
+    .blockquote cite { display: block; margin-top: 0.55rem; font-size: 0.7rem; color: var(--accent); font-style: normal; letter-spacing: 0.1em; }
+
+    .feat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin: 1.8rem 0;
+    }
+    .feat-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.84rem; color: var(--text); }
+    .feat-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
+
+    /* =============================================
+       GALLERY
+    ============================================= */
+    .gallery { background: var(--bg-dark); padding: 5rem 0; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 0.65rem;
+    }
+
+    .gal-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 3px;
+      aspect-ratio: 4/3;
+      cursor: default;
+    }
+    .gal-item.gal-feat {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: auto;
+    }
+    .gal-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: grayscale(25%) contrast(1.05);
+      transition: transform 0.55s ease, filter 0.4s ease;
+      pointer-events: none;
+    }
+    .gal-item:hover img { transform: scale(1.07); filter: grayscale(0%) contrast(1.1); }
+
+    .gal-overlay {
+      position: absolute; inset: 0;
+      background: rgba(10,10,10,0);
+      display: flex; align-items: flex-end;
+      padding: 1rem;
+      transition: background 0.3s;
+    }
+    .gal-item:hover .gal-overlay { background: rgba(10,10,10,0.45); }
+
+    .gal-lbl {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: all 0.3s ease;
+    }
+    .gal-item:hover .gal-lbl { opacity: 1; transform: translateY(0); }
+
+    /* =============================================
+       REVIEWS
+    ============================================= */
+    .reviews { background: var(--bg); padding: 5rem 0; }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .rev-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 1.75rem;
+      border-radius: 3px;
+      transition: border-color 0.28s;
+    }
+    .rev-card:hover { border-color: rgba(200,164,90,0.38); }
+    .rev-stars { color: var(--accent); font-size: 0.95rem; letter-spacing: 0.12em; margin-bottom: 1rem; }
+    .rev-text { font-size: 0.875rem; color: var(--text-muted); line-height: 1.72; font-style: italic; margin-bottom: 1.25rem; }
+    .rev-author { font-family: 'Oswald', sans-serif; font-size: 0.82rem; font-weight: 600; color: var(--text); letter-spacing: 0.06em; }
+    .rev-src { font-size: 0.68rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+    /* =============================================
+       LOCATION & HOURS
+    ============================================= */
+    .location { background: var(--bg-dark); padding: 5rem 0; }
+
+    .loc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* map */
+    .map-wrap {
+      border-radius: 3px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-bottom: 1rem;
+      line-height: 0;
+    }
+    .map-wrap iframe {
+      width: 100%; height: 280px; border: none;
+      filter: grayscale(70%) invert(92%) contrast(0.88);
+      display: block;
+    }
+    .map-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.85rem 1rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: transparent;
+      border: 1px solid var(--accent);
+      border-radius: 2px;
+      transition: all 0.28s;
+      cursor: pointer;
+    }
+    .map-btn:hover { background: var(--accent); color: #111; }
+
+    /* hours */
+    .hours-h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+    .hours-table { width: 100%; border-collapse: collapse; }
+    .hours-table tr { border-bottom: 1px solid var(--border); }
+    .hours-table tr:last-child { border-bottom: none; }
+    .hours-table td { padding: 0.8rem 0; font-size: 0.88rem; }
+    .hours-table td:first-child { font-family: 'Oswald', sans-serif; font-weight: 500; color: var(--text); width: 42%; letter-spacing: 0.04em; }
+    .hours-table td:last-child { color: var(--text-muted); }
+    .closed-day { color: #555 !important; }
+
+    /* contact info */
+    .loc-info { margin-top: 2rem; }
+    .loc-item { display: flex; gap: 1rem; margin-bottom: 1.15rem; align-items: flex-start; }
+    .loc-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+    .loc-text { font-size: 0.87rem; color: var(--text-muted); line-height: 1.6; }
+    .loc-text strong { display: block; font-family: 'Oswald', sans-serif; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); margin-bottom: 0.18rem; }
+    .loc-text a { color: var(--accent); transition: color 0.25s; }
+    .loc-text a:hover { color: var(--accent-lt); }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    footer {
+      background: #0a0a0a;
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    .foot-logo { font-family: 'Oswald', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 0.35rem; }
+    .foot-addr { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.2rem; }
+    .foot-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+    .foot-links a { font-family: 'Oswald', sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); transition: color 0.25s; }
+    .foot-links a:hover { color: var(--accent); }
+    .foot-copy { font-size: 0.7rem; color: #444; }
+
+    /* =============================================
+       STICKY MOBILE ACTION BAR
+    ============================================= */
+    .mob-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      width: 100%;
+      z-index: 50;
+      display: none;
+      grid-template-columns: 1fr 1fr;
+      border-top: 2px solid var(--accent);
+      box-shadow: 0 -6px 24px rgba(0,0,0,0.55);
+    }
+    .mob-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 1.05rem 0.5rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: filter 0.2s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .mob-btn:active { filter: brightness(0.88); }
+    .mob-call { background: var(--accent); color: #111; }
+    .mob-dir  { background: #1e1e1e; color: var(--white); }
+
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-img-wrap img { height: 320px; }
+      .about-corner { display: none; }
+      .about-text { padding-right: 0; }
+      .loc-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .navbar { padding: 0 1.2rem; }
+
+      .hero-stats { flex-wrap: wrap; }
+      .stat-item { min-width: 120px; }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+      }
+      .gal-item.gal-feat { grid-column: span 2; grid-row: span 1; aspect-ratio: 16/7; }
+
+      section, .services, .about, .gallery, .reviews, .location { padding: 3.5rem 0; }
+
+      /* show sticky bar */
+      .mob-bar { display: grid; }
+      body { padding-bottom: 58px; }
+    }
+
+    @media (max-width: 520px) {
+      .hero-btns { flex-direction: column; align-items: center; }
+      .hero-btns .btn { width: 100%; max-width: 300px; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gal-item.gal-feat { grid-column: span 1; aspect-ratio: 4/3; }
+      .feat-grid { grid-template-columns: 1fr; }
+    }
+
+    /* =============================================
+       SCROLL REVEAL
+    ============================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.32s; }
+    .reveal-delay-4 { transition-delay: 0.44s; }
+  </style>
+</head>
+<body>
+
+<!-- ============================
+     TOP RIBBON
+============================= -->
+<div class="ribbon" aria-label="Walk-ins welcome announcement">
+  ✂&nbsp; Walk-Ins Always Welcome — No Appointment Needed &nbsp;✂
+</div>
+
+<!-- ============================
+     NAVIGATION
+============================= -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <a href="#home" class="nav-logo" aria-label="Grandville Barbershop home">
+    Grandville&nbsp;<span>Barbershop</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#location">Hours</a></li>
+    <li><a href="tel:6164858187" class="nav-call">📞 Call Now</a></li>
+  </ul>
+</nav>
+
+<!-- ============================
+     HERO
+============================= -->
+<section class="hero" id="home" aria-label="Hero section">
+  <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">Grandville, Michigan's Finest Since Day One</div>
+    <h1>
+      Grandville's<br>
+      <span class="gold">Premier</span><br>
+      Barbershop
+    </h1>
+    <p class="hero-sub">
+      Precision cuts, crisp skin fades &amp; traditional hot towel shaves —
+      delivered with old-school craftsmanship and a modern edge.
+    </p>
+    <div class="hero-btns">
+      <a href="tel:6164858187" class="btn btn-gold">
+        📞 Call&nbsp;(616)&nbsp;485-8187
+      </a>
+      <a href="#services" class="btn btn-outline">
+        View Services
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-stats" aria-label="Shop stats">
+    <div class="stat-item">
+      <div class="stat-num">4.8 ★</div>
+      <div class="stat-lbl">Google Rating</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">186+</div>
+      <div class="stat-lbl">Reviews</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">10+</div>
+      <div class="stat-lbl">Years Serving</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">$20–$30</div>
+      <div class="stat-lbl">Affordable Pricing</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     SERVICES & PRICING
+============================= -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">Services &amp; Pricing</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="services-grid">
+      <div class="svc-card reveal reveal-delay-1">
+        <div class="svc-icon">✂️</div>
+        <div class="svc-name">Men's Haircut</div>
+        <p class="svc-desc">Classic cuts tailored to your style. We cut all types — short, long, and everything in between. Every cut includes a hot lather neck shave.</p>
+        <div class="svc-price">$XX</div>
+        <div class="svc-note">Hot lather neck shave included</div>
+      </div>
+
+      <div class="svc-card reveal reveal-delay-2">
+        <div class="svc-icon">💈</div>
+        <div class="svc-name">Skin Fade</div>
+        <p class="svc-desc">Crisp, clean fades from bald to blended. We specialize in high &amp; tight, military, taper fades, and flat tops done right.</p>
+        <div class="svc-price">$XX</div>
+        <div class="svc-note">Starting price</div>
+      </div>
+
+      <div class="svc-card reveal reveal-delay-3">
+        <div class="svc-icon">🪒</div>
+        <div class="svc-name">Beard Trim &amp; Line Up</div>
+        <p class="svc-desc">Sharp edges, defined lines, clean finish. Get your beard looking its absolute best with a precision trim and crisp line up.</p>
+        <div class="svc-price">$XX</div>
+        <div class="svc-note">Add-on available with any haircut</div>
+      </div>
+
+      <div class="svc-card reveal reveal-delay-4">
+        <div class="svc-icon">🔥</div>
+        <div class="svc-name">Hot Towel Shave</div>
+        <p class="svc-desc">The full classic barbershop experience. Warm lather, steaming hot towel, and a straight razor — pure old-school luxury at its finest.</p>
+        <div class="svc-price">$XX</div>
+        <div class="svc-note">Full straight razor service</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     ABOUT
+============================= -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <!-- image -->
+      <div class="about-img-wrap reveal">
+        <div class="about-badge-img" aria-hidden="true">Est. in Grandville, MI</div>
+        <img
+          src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
+          alt="Skilled barber at work at Grandville Barbershop"
+          loading="lazy"
+          width="800" height="520"
+        />
+        <div class="about-corner" aria-hidden="true"></div>
+      </div>
+
+      <!-- text -->
+      <div class="about-text reveal reveal-delay-2">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">Meet Cindy<br>&amp; The Team</h2>
+
+        <p>
+          Grandville Barbershop isn't just a place to get your hair cut — it's a Grandville institution.
+          Owner Cindy and her team have been crafting sharp fades, classic cuts, and straight-razor shaves
+          for this community for years, building the kind of loyal following that only comes from
+          consistently exceptional work.
+        </p>
+        <p>
+          Step inside and you'll immediately feel the difference. The warm, old-school atmosphere puts
+          you at ease while skilled barbers deliver modern, precision cuts tailored to exactly what you want.
+          All hair types welcome. Kids welcome. Walk-ins always welcome.
+        </p>
+
+        <blockquote class="blockquote">
+          <p>"My husband has been getting his haircut from Cindy for over 4 years now and refuses to go anywhere else!!"</p>
+          <cite>— Samantha S., Verified Google Review ★★★★★</cite>
+        </blockquote>
+
+        <div class="feat-grid">
+          <div class="feat-item"><div class="feat-dot"></div>Walk-Ins Always Welcome</div>
+          <div class="feat-item"><div class="feat-dot"></div>All Hair Types Cut</div>
+          <div class="feat-item"><div class="feat-dot"></div>Kids &amp; Family Friendly</div>
+          <div class="feat-item"><div class="feat-dot"></div>Credit Cards Accepted</div>
+          <div class="feat-item"><div class="feat-dot"></div>Free Private Parking</div>
+          <div class="feat-item"><div class="feat-dot"></div>Competitive Pricing</div>
+        </div>
+
+        <a href="tel:6164858187" class="btn btn-gold">
+          📞 Call (616) 485-8187
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     GALLERY
+============================= -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">The Craft</span>
+      <h2 class="section-title">Fresh Cuts. Every Time.</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Featured large image -->
+      <div class="gal-item gal-feat reveal">
+        <img
+          src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80"
+          alt="Classic barbershop interior — Grandville Barbershop"
+          loading="lazy"
+          width="1200" height="800"
+        />
+        <div class="gal-overlay"><span class="gal-lbl">Classic Shop Vibes</span></div>
+      </div>
+
+      <div class="gal-item reveal reveal-delay-1">
+        <img
+          src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80"
+          alt="Crisp skin fade haircut"
+          loading="lazy"
+          width="800" height="600"
+        />
+        <div class="gal-overlay"><span class="gal-lbl">Skin Fade</span></div>
+      </div>
+
+      <div class="gal-item reveal reveal-delay-2">
+        <img
+          src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80"
+          alt="Professional barber tools and scissors"
+          loading="lazy"
+          width="800" height="600"
+        />
+        <div class="gal-overlay"><span class="gal-lbl">Precision Tools</span></div>
+      </div>
+
+      <div class="gal-item reveal reveal-delay-1">
+        <img
+          src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80"
+          alt="Traditional straight razor hot towel shave"
+          loading="lazy"
+          width="800" height="600"
+        />
+        <div class="gal-overlay"><span class="gal-lbl">Hot Towel Shave</span></div>
+      </div>
+
+      <div class="gal-item reveal reveal-delay-2">
+        <img
+          src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
+          alt="Barber delivering a precise haircut"
+          loading="lazy"
+          width="800" height="600"
+        />
+        <div class="gal-overlay"><span class="gal-lbl">Expert Cuts</span></div>
+      </div>
+
+      <div class="gal-item reveal reveal-delay-3">
+        <img
+          src="https://images.unsplash.com/photo-1582095133179-bfd08e2fb6b8?auto=format&fit=crop&w=800&q=80"
+          alt="Professional beard trim and lineup"
+          loading="lazy"
+          width="800" height="600"
+        />
+        <div class="gal-overlay"><span class="gal-lbl">Beard Trim &amp; Line Up</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     REVIEWS
+============================= -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">What People Are Saying</span>
+      <h2 class="section-title">4.8 Stars on Google</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="rev-card reveal reveal-delay-1">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"Cindy gave me a QUALITY haircut with a QUALITY conversation. Very knowledgeable and professional. Efficient and quick. She got me in and out with a nice haircut in 20 minutes."</p>
+        <div class="rev-author">Jordan F.</div>
+        <div class="rev-src">Google Review · May 2025</div>
+      </div>
+
+      <div class="rev-card reveal reveal-delay-2">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"Cindy gave me the cleanest fade and beard line up I've had in a while. I'd been bouncing around from shop to shop to find a new barber, and after this cut my search is over."</p>
+        <div class="rev-author">Jake K.</div>
+        <div class="rev-src">Google Review</div>
+      </div>
+
+      <div class="rev-card reveal reveal-delay-3">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"Best barbershop in the area hands down. Very friendly and qualified staff. I just recently moved to the area and finally found a place I love."</p>
+        <div class="rev-author">Kenny H.</div>
+        <div class="rev-src">Google Review · 3 months ago</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     LOCATION & HOURS
+============================= -->
+<section class="location" id="location">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Find Us</span>
+      <h2 class="section-title">Location &amp; Hours</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="loc-grid">
+      <!-- Map column -->
+      <div class="reveal">
+        <div class="map-wrap">
+          <iframe
+            src="https://maps.google.com/maps?q=4390+Chicago+Dr+SW,+Grandville,+MI+49418&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Grandville Barbershop on Google Maps"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <a
+          href="https://maps.google.com/?q=4390+Chicago+Dr+SW,+Grandville,+MI+49418"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="map-btn"
+          aria-label="Get directions to Grandville Barbershop"
+        >
+          📍 Get Directions in Google Maps
+        </a>
+      </div>
+
+      <!-- Hours + info column -->
+      <div class="reveal reveal-delay-2">
+        <div class="hours-h3">Hours of Operation</div>
+        <table class="hours-table allow-select" aria-label="Business hours">
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td class="closed-day">Closed</td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>9:00 AM – 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>9:00 AM – 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>9:00 AM – 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>9:00 AM – 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>9:00 AM – 1:00 PM</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td class="closed-day">Closed</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="loc-info allow-select">
+          <div class="loc-item">
+            <span class="loc-icon" aria-hidden="true">📍</span>
+            <div class="loc-text">
+              <strong>Address</strong>
+              <address style="font-style:normal;">
+                4390 Chicago Dr SW<br>
+                Grandville, MI 49418
+              </address>
+            </div>
+          </div>
+
+          <div class="loc-item">
+            <span class="loc-icon" aria-hidden="true">📞</span>
+            <div class="loc-text">
+              <strong>Phone</strong>
+              <a href="tel:6164858187">(616) 485-8187</a>
+            </div>
+          </div>
+
+          <div class="loc-item">
+            <span class="loc-icon" aria-hidden="true">🚗</span>
+            <div class="loc-text">
+              <strong>Parking</strong>
+              Free private lot parking on-site
+            </div>
+          </div>
+
+          <div class="loc-item">
+            <span class="loc-icon" aria-hidden="true">💳</span>
+            <div class="loc-text">
+              <strong>Payment</strong>
+              Cash &amp; Credit Cards Accepted
+            </div>
+          </div>
+        </div>
+
+        <a href="tel:6164858187" class="btn btn-gold" style="width:100%; margin-top:1.25rem;">
+          📞 Call (616) 485-8187
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     FOOTER
+============================= -->
+<footer>
+  <div class="foot-logo">Grandville Barbershop</div>
+  <div class="foot-addr">4390 Chicago Dr SW, Grandville, MI 49418 &nbsp;|&nbsp; (616) 485-8187</div>
+  <nav class="foot-links" aria-label="Footer navigation">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#location">Hours</a>
+    <a href="tel:6164858187">Call Now</a>
+  </nav>
+  <div class="foot-copy">&copy; 2026 Grandville Barbershop. All Rights Reserved. Unauthorized reproduction of this site is prohibited.</div>
+</footer>
+
+<!-- ============================
+     STICKY MOBILE ACTION BAR
+============================= -->
+<div class="mob-bar" role="navigation" aria-label="Quick actions">
+  <a href="tel:6164858187" class="mob-btn mob-call" aria-label="Call Grandville Barbershop">
+    <span aria-hidden="true">📞</span> Call the Shop
+  </a>
+  <a
+    href="https://maps.google.com/?q=4390+Chicago+Dr+SW,+Grandville,+MI+49418"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="mob-btn mob-dir"
+    aria-label="Get directions to Grandville Barbershop"
+  >
+    <span aria-hidden="true">📍</span> Get Directions
+  </a>
+</div>
+
+<!-- ============================
+     SCRIPTS
+============================= -->
+<script>
+(function () {
+  'use strict';
+
+  /* --------------------------------------------------
+     NAV SCROLL SHADOW
+  -------------------------------------------------- */
+  var nav = document.getElementById('navbar');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 60) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  /* --------------------------------------------------
+     HERO PARALLAX (subtle)
+  -------------------------------------------------- */
+  var heroBg = document.getElementById('heroBg');
+  if (heroBg && window.innerWidth > 768) {
+    window.addEventListener('scroll', function () {
+      var scrolled = window.scrollY;
+      heroBg.style.transform = 'scale(1.06) translateY(' + (scrolled * 0.22) + 'px)';
+    }, { passive: true });
+  }
+
+  /* --------------------------------------------------
+     SMOOTH ANCHOR SCROLL (offset for fixed nav + ribbon)
+  -------------------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        var offset = 102; // nav + ribbon height
+        var top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* --------------------------------------------------
+     SCROLL REVEAL
+  -------------------------------------------------- */
+  var reveals = document.querySelectorAll('.reveal');
+  var revealObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  reveals.forEach(function (el) { revealObs.observe(el); });
+
+  /* --------------------------------------------------
+     CONTENT PROTECTION
+  -------------------------------------------------- */
+  // Disable right-click context menu
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    return false;
+  });
+
+  // Disable common inspect/source keyboard shortcuts
+  document.addEventListener('keydown', function (e) {
+    var k = e.key || e.keyCode;
+    // F12
+    if (k === 'F12' || k === 123) { e.preventDefault(); return false; }
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+P (print), Ctrl+A (select all)
+    if (e.ctrlKey || e.metaKey) {
+      var blocked = ['u', 'U', 's', 'S', 'p', 'P', 'a', 'A', 'j', 'J'];
+      if (blocked.indexOf(k) !== -1) { e.preventDefault(); return false; }
+      // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+Shift+C
+      if (e.shiftKey && (k === 'I' || k === 'i' || k === 'J' || k === 'j' || k === 'C' || k === 'c')) {
+        e.preventDefault();
+        return false;
+      }
+    }
+  });
+
+  // Console warning
+  (function devtoolsWarning() {
+    var warned = false;
+    Object.defineProperty(console, '_commandLineAPI', {
+      get: function () {
+        if (!warned) {
+          warned = true;
+          console.clear();
+          console.log(
+            '%c⛔ Grandville Barbershop',
+            'color:#c8a45a;font-size:22px;font-weight:bold;'
+          );
+          console.log(
+            '%cThis site is proprietary. Unauthorized copying or distribution is prohibited.\n© 2026 Grandville Barbershop. All Rights Reserved.',
+            'color:#aaa;font-size:13px;'
+          );
+        }
+      }
+    });
+    // Also print once on load for extra deterrence
+    setTimeout(function () {
+      console.log(
+        '%c⛔  © 2026 Grandville Barbershop — All Rights Reserved. This code is proprietary.',
+        'color:#c8a45a;font-weight:bold;font-size:12px;'
+      );
+    }, 800);
+  }());
+
+  // Disable drag on images (belt + suspenders)
+  document.querySelectorAll('img').forEach(function (img) {
+    img.addEventListener('dragstart', function (e) { e.preventDefault(); });
+  });
+
+})();
+</script>
+
+</body>
+</html>
