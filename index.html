@@ -53,9 +53,9 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:         #1a1a1a;
-      --bg-dark:    #111111;
-      --bg-card:    #222222;
+      --bg:         #121212;
+      --bg-dark:    #0d0d0d;
+      --bg-card:    #1c1c1c;
       --text:       #f0f0f0;
       --text-muted: #999999;
       --accent:     #c8a45a;
@@ -169,11 +169,11 @@
       background: var(--accent);
       color: #111;
       text-align: center;
-      padding: 0.6rem 1rem;
+      padding: 0.65rem 1rem;
       font-family: 'Oswald', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
     }
 
@@ -341,50 +341,65 @@
     }
 
     /* =============================================
-       SERVICES
+       SERVICES — DOTTED LEADER MENU
     ============================================= */
     .services { background: var(--bg-dark); padding: 5rem 0; }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.4rem;
-    }
+    .menu-list { max-width: 780px; margin: 0 auto; }
 
-    .svc-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      padding: 2rem 1.75rem;
-      border-radius: 3px;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.28s, border-color 0.28s, box-shadow 0.28s;
+    .menu-item {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      padding: 1.35rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.055);
     }
-    .svc-card::after {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 3px;
-      background: var(--accent);
-      transform: scaleY(0);
-      transform-origin: bottom;
-      transition: transform 0.3s ease;
-    }
-    .svc-card:hover { transform: translateY(-5px); border-color: rgba(200,164,90,0.4); box-shadow: 0 12px 32px rgba(0,0,0,0.35); }
-    .svc-card:hover::after { transform: scaleY(1); }
+    .menu-item:last-child { border-bottom: none; }
 
-    .svc-icon { font-size: 2.2rem; margin-bottom: 1.1rem; }
-    .svc-name {
+    .menu-item-left {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .menu-icon { font-size: 1.5rem; width: 2.2rem; text-align: center; flex-shrink: 0; }
+
+    .menu-name {
       font-family: 'Oswald', sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 600;
       color: var(--white);
-      margin-bottom: 0.55rem;
       letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: block;
+      line-height: 1.2;
     }
-    .svc-desc { font-size: 0.855rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.4rem; }
-    .svc-price { font-family: 'Oswald', sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--accent); }
-    .svc-note { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.25rem; }
+    .menu-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.22rem;
+      display: block;
+      letter-spacing: 0.02em;
+      font-family: 'Open Sans', sans-serif;
+      text-transform: none;
+    }
+    .menu-dots {
+      flex: 1;
+      border-bottom: 2px dotted rgba(200,164,90,0.22);
+      margin: 0 1.1rem;
+      /* keep dots vertically centered with name */
+      align-self: flex-end;
+      margin-bottom: 0.45rem;
+    }
+    .menu-price-wrap { flex-shrink: 0; text-align: right; }
+    .menu-price {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      display: block;
+    }
 
     /* =============================================
        ABOUT
@@ -691,6 +706,149 @@
     }
 
     /* =============================================
+       HERO GRAIN TEXTURE
+    ============================================= */
+    .hero-grain {
+      position: absolute; inset: 0; z-index: 1;
+      pointer-events: none;
+      opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 300px 300px;
+    }
+
+    /* =============================================
+       MEET YOUR BARBERS
+    ============================================= */
+    .team { background: var(--bg); padding: 5rem 0; }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .team-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: border-color 0.28s, transform 0.28s, box-shadow 0.28s;
+    }
+    .team-card:hover { border-color: rgba(200,164,90,0.4); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.35); }
+    .team-card-hiring { border-style: dashed; }
+
+    .team-avatar {
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      overflow: hidden;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 0 6px rgba(200,164,90,0.1);
+    }
+    .team-avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      filter: grayscale(15%);
+      pointer-events: none;
+    }
+    .team-avatar-empty {
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, #1a1a1a, #272727);
+      border: 3px dashed var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+    }
+    .team-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .team-role {
+      font-size: 0.72rem;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+    .team-bio {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.78;
+      margin-bottom: 1.4rem;
+    }
+    .team-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      justify-content: center;
+    }
+    .team-tag {
+      font-size: 0.66rem;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(200,164,90,0.09);
+      border: 1px solid rgba(200,164,90,0.22);
+      padding: 0.25rem 0.7rem;
+      border-radius: 2px;
+    }
+    .hiring-badge {
+      display: inline-block;
+      font-size: 0.66rem;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #111;
+      background: var(--accent);
+      padding: 0.3rem 0.85rem;
+      border-radius: 2px;
+      margin-bottom: 1.2rem;
+    }
+
+    /* =============================================
+       BOOK BUTTON
+    ============================================= */
+    .btn-book {
+      background: var(--accent);
+      color: #111;
+      border-color: var(--accent);
+      box-shadow: 0 6px 28px rgba(200,164,90,0.4);
+      font-size: 1rem;
+      padding: 1.05rem 2.4rem;
+      letter-spacing: 0.12em;
+    }
+    .btn-book:hover {
+      background: var(--accent-lt);
+      border-color: var(--accent-lt);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 36px rgba(200,164,90,0.5);
+      color: #111;
+    }
+
+    /* responsive additions */
+    @media (max-width: 768px) {
+      .team-grid { grid-template-columns: 1fr; max-width: 400px; }
+      .menu-icon { font-size: 1.2rem; width: 1.8rem; }
+      .menu-name { font-size: 1rem; }
+      .menu-price { font-size: 1.2rem; }
+      .menu-dots { margin: 0 0.6rem; margin-bottom: 0.4rem; }
+    }
+
+    /* =============================================
        SCROLL REVEAL
     ============================================= */
     .reveal {
@@ -711,7 +869,7 @@
      TOP RIBBON
 ============================= -->
 <div class="ribbon" aria-label="Walk-ins welcome announcement">
-  ✂&nbsp; Walk-Ins Always Welcome — No Appointment Needed &nbsp;✂
+  💈&nbsp; Walk-Ins Always Welcome &mdash; Stop By Or Call Ahead &nbsp;💈
 </div>
 
 <!-- ============================
@@ -723,10 +881,10 @@
   </a>
   <ul class="nav-links" role="list">
     <li><a href="#services">Services</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="#team">Team</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#location">Hours</a></li>
-    <li><a href="tel:6164858187" class="nav-call">📞 Call Now</a></li>
+    <li><a href="tel:6164858187" class="nav-call">✂ Book Now</a></li>
   </ul>
 </nav>
 
@@ -736,6 +894,7 @@
 <section class="hero" id="home" aria-label="Hero section">
   <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
   <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-grain" aria-hidden="true"></div>
 
   <div class="hero-content">
     <div class="hero-badge">Est. 1961 &mdash; Grandville, Michigan's Finest</div>
@@ -749,8 +908,8 @@
       serving Grandville with old-school craftsmanship for over 65 years.
     </p>
     <div class="hero-btns">
-      <a href="tel:6164858187" class="btn btn-gold">
-        📞 Call&nbsp;(616)&nbsp;485-8187
+      <a href="tel:6164858187" class="btn btn-book">
+        ✂&nbsp; Book Appointment
       </a>
       <a href="#services" class="btn btn-outline">
         View Services
@@ -789,38 +948,137 @@
       <div class="divider"></div>
     </div>
 
-    <div class="services-grid">
-      <div class="svc-card reveal reveal-delay-1">
-        <div class="svc-icon">✂️</div>
-        <div class="svc-name">Men's Haircut</div>
-        <p class="svc-desc">Classic cuts tailored to your style. We cut all types — short, long, and everything in between. Every cut includes a hot lather neck shave.</p>
-        <div class="svc-price">$XX</div>
-        <div class="svc-note">Hot lather neck shave included</div>
+    <div class="menu-list">
+
+      <div class="menu-item reveal reveal-delay-1">
+        <div class="menu-item-left">
+          <span class="menu-icon">✂️</span>
+          <div>
+            <span class="menu-name">Classic Haircut</span>
+            <span class="menu-sub">All hair types &mdash; hot lather neck shave included</span>
+          </div>
+        </div>
+        <div class="menu-dots"></div>
+        <div class="menu-price-wrap">
+          <span class="menu-price">$XX</span>
+        </div>
       </div>
 
-      <div class="svc-card reveal reveal-delay-2">
-        <div class="svc-icon">💈</div>
-        <div class="svc-name">Skin Fade</div>
-        <p class="svc-desc">Crisp, clean fades from bald to blended. We specialize in high &amp; tight, military, taper fades, and flat tops done right.</p>
-        <div class="svc-price">$XX</div>
-        <div class="svc-note">Starting price</div>
+      <div class="menu-item reveal reveal-delay-2">
+        <div class="menu-item-left">
+          <span class="menu-icon">💈</span>
+          <div>
+            <span class="menu-name">Skin Fade</span>
+            <span class="menu-sub">Bald, taper, high &amp; tight, military, flat top</span>
+          </div>
+        </div>
+        <div class="menu-dots"></div>
+        <div class="menu-price-wrap">
+          <span class="menu-price">$XX</span>
+        </div>
       </div>
 
-      <div class="svc-card reveal reveal-delay-3">
-        <div class="svc-icon">🪒</div>
-        <div class="svc-name">Beard Trim &amp; Line Up</div>
-        <p class="svc-desc">Sharp edges, defined lines, clean finish. Get your beard looking its absolute best with a precision trim and crisp line up.</p>
-        <div class="svc-price">$XX</div>
-        <div class="svc-note">Add-on available with any haircut</div>
+      <div class="menu-item reveal reveal-delay-3">
+        <div class="menu-item-left">
+          <span class="menu-icon">👦</span>
+          <div>
+            <span class="menu-name">Kids Cut <span style="font-size:0.75rem; font-weight:400; color:var(--text-muted); letter-spacing:0.02em;">(12 &amp; Under)</span></span>
+            <span class="menu-sub">Patient, gentle &amp; quick &mdash; kids love it here</span>
+          </div>
+        </div>
+        <div class="menu-dots"></div>
+        <div class="menu-price-wrap">
+          <span class="menu-price">$XX</span>
+        </div>
       </div>
 
-      <div class="svc-card reveal reveal-delay-4">
-        <div class="svc-icon">🔥</div>
-        <div class="svc-name">Hot Towel Shave</div>
-        <p class="svc-desc">The full classic barbershop experience. Warm lather, steaming hot towel, and a straight razor — pure old-school luxury at its finest.</p>
-        <div class="svc-price">$XX</div>
-        <div class="svc-note">Full straight razor service</div>
+      <div class="menu-item reveal reveal-delay-4">
+        <div class="menu-item-left">
+          <span class="menu-icon">🪒</span>
+          <div>
+            <span class="menu-name">Beard Trim &amp; Line Up</span>
+            <span class="menu-sub">Sharp edges, defined lines &mdash; add-on with any cut</span>
+          </div>
+        </div>
+        <div class="menu-dots"></div>
+        <div class="menu-price-wrap">
+          <span class="menu-price">$XX</span>
+        </div>
       </div>
+
+      <div class="menu-item reveal reveal-delay-4">
+        <div class="menu-item-left">
+          <span class="menu-icon">🔥</span>
+          <div>
+            <span class="menu-name">Hot Towel Straight Razor Shave</span>
+            <span class="menu-sub">Warm lather &middot; steaming hot towel &middot; straight razor</span>
+          </div>
+        </div>
+        <div class="menu-dots"></div>
+        <div class="menu-price-wrap">
+          <span class="menu-price">$XX</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     MEET YOUR BARBERS
+============================= -->
+<section class="team" id="team">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">The People Behind The Cuts</span>
+      <h2 class="section-title">Meet Your Barbers</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="team-grid">
+
+      <!-- Cindy -->
+      <div class="team-card reveal reveal-delay-1">
+        <!-- TODO: Replace src with Cindy's actual headshot photo -->
+        <div class="team-avatar">
+          <img
+            src="unnamed-7.jpg"
+            alt="Cindy — Owner and Master Barber at Grandville Barbershop"
+            loading="lazy"
+          />
+        </div>
+        <div class="team-name">Cindy</div>
+        <div class="team-role">Owner &amp; Master Barber</div>
+        <p class="team-bio">
+          Cindy has been shaping Grandville since the day she took ownership. Known for
+          her precision fades, flat tops, and genuine care for every client that sits in
+          her chair — she's why customers drive past every other shop to get here.
+        </p>
+        <div class="team-tags">
+          <span class="team-tag">Fades</span>
+          <span class="team-tag">Flat Tops</span>
+          <span class="team-tag">Kids Cuts</span>
+          <span class="team-tag">Beard Trims</span>
+          <span class="team-tag">Hot Towel Shave</span>
+        </div>
+      </div>
+
+      <!-- Open Chair -->
+      <div class="team-card team-card-hiring reveal reveal-delay-2">
+        <div class="team-avatar-empty" aria-hidden="true">💈</div>
+        <span class="hiring-badge">Now Hiring</span>
+        <div class="team-name">Open Chair</div>
+        <div class="team-role">Licensed Barber &mdash; Apply Today</div>
+        <p class="team-bio">
+          We're looking for a licensed, passionate barber ready to join a team with
+          over 60 years of community trust behind it. Walk-in clientele, established
+          shop, great atmosphere. Come grow your book here.
+        </p>
+        <a href="tel:6164858187" class="btn btn-outline" style="margin-top:0.5rem; width:100%; font-size:0.82rem; padding:0.75rem 1rem;">
+          📞 Call to Inquire
+        </a>
+      </div>
+
     </div>
   </div>
 </section>
@@ -874,8 +1132,8 @@
           <div class="feat-item"><div class="feat-dot"></div>Competitive Pricing</div>
         </div>
 
-        <a href="tel:6164858187" class="btn btn-gold">
-          📞 Call (616) 485-8187
+        <a href="tel:6164858187" class="btn btn-book">
+          ✂&nbsp; Book Appointment
         </a>
       </div>
     </div>
@@ -1095,8 +1353,8 @@
           </div>
         </div>
 
-        <a href="tel:6164858187" class="btn btn-gold" style="width:100%; margin-top:1.25rem;">
-          📞 Call (616) 485-8187
+        <a href="tel:6164858187" class="btn btn-book" style="width:100%; margin-top:1.25rem;">
+          ✂&nbsp; Book Appointment &mdash; (616) 485-8187
         </a>
       </div>
     </div>
@@ -1111,10 +1369,11 @@
   <div class="foot-addr">4390 Chicago Dr SW, Grandville, MI 49418 &nbsp;|&nbsp; (616) 485-8187</div>
   <nav class="foot-links" aria-label="Footer navigation">
     <a href="#services">Services</a>
-    <a href="#about">About</a>
+    <a href="#team">Team</a>
     <a href="#gallery">Gallery</a>
     <a href="#location">Hours</a>
     <a href="tel:6164858187">Call Now</a>
+    <a href="https://www.facebook.com/profile.php?id=100063546554535" target="_blank" rel="noopener noreferrer">Facebook</a>
   </nav>
   <div class="foot-copy">&copy; 2026 Grandville Barbershop &mdash; Est. 1961. All Rights Reserved. Unauthorized reproduction of this site is prohibited.</div>
 </footer>
@@ -1123,8 +1382,8 @@
      STICKY MOBILE ACTION BAR
 ============================= -->
 <div class="mob-bar" role="navigation" aria-label="Quick actions">
-  <a href="tel:6164858187" class="mob-btn mob-call" aria-label="Call Grandville Barbershop">
-    <span aria-hidden="true">📞</span> Call the Shop
+  <a href="tel:6164858187" class="mob-btn mob-call" aria-label="Book appointment at Grandville Barbershop">
+    <span aria-hidden="true">✂</span> Book Appointment
   </a>
   <a
     href="https://maps.google.com/?q=4390+Chicago+Dr+SW,+Grandville,+MI+49418"
