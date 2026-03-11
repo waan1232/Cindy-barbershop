@@ -7,7 +7,7 @@
   <meta name="keywords" content="barbershop grandville michigan, haircut grandville, skin fade grandville, beard trim, hot towel shave, Cindy barber" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Grandville Barbershop" />
-  <meta property="og:title" content="Grandville Barbershop — Precision Cuts &amp; Classic Shaves" />
+  <meta property="og:title" content="Grandville Barbershop - Precision Cuts &amp; Classic Shaves" />
   <meta property="og:description" content="Grandville's premier barbershop. Walk-ins welcome. Expert fades, beard trims &amp; hot towel shaves on Chicago Dr SW." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#1a1a1a" />
@@ -249,10 +249,21 @@
 
     .hero-bg {
       position: absolute; inset: 0;
-      background: url('unnamed-5.jpg') center/cover no-repeat;
+      background: url('IMG_3469.JPG') center/cover no-repeat;
       transform: scale(1.06);
       pointer-events: none;
       will-change: transform;
+    }
+    .hero-bg2 {
+      position: absolute; inset: 0;
+      background: url('FCD5BFDC-1E15-4E80-9A9E-A970FCF5FECE.jpeg') center/cover no-repeat;
+      transform: scale(1.06);
+      pointer-events: none;
+      animation: heroCrossfade 14s ease-in-out infinite alternate;
+    }
+    @keyframes heroCrossfade {
+      0%, 35% { opacity: 0; }
+      65%, 100% { opacity: 1; }
     }
     .hero-overlay {
       position: absolute; inset: 0;
@@ -341,7 +352,7 @@
     }
 
     /* =============================================
-       SERVICES — DOTTED LEADER MENU
+       SERVICES - DOTTED LEADER MENU
     ============================================= */
     .services { background: var(--bg-dark); padding: 5rem 0; }
 
@@ -869,7 +880,7 @@
      TOP RIBBON
 ============================= -->
 <div class="ribbon" aria-label="Walk-ins welcome announcement">
-  💈&nbsp; Walk-Ins Always Welcome &mdash; Stop By Or Call Ahead &nbsp;💈
+  💈&nbsp; Walk-Ins Always Welcome - Stop By Or Call Ahead &nbsp;💈
 </div>
 
 <!-- ============================
@@ -892,23 +903,24 @@
 ============================= -->
 <section class="hero" id="home" aria-label="Hero section">
   <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+  <div class="hero-bg2" id="heroBg2" aria-hidden="true"></div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-grain" aria-hidden="true"></div>
 
   <div class="hero-content">
-    <div class="hero-badge">Est. 1961 &mdash; Grandville, Michigan's Finest</div>
+    <div class="hero-badge">Est. 1961 - Grandville, Michigan's Finest</div>
     <h1>
       Grandville's<br>
       <span class="gold">Premier</span><br>
       Barbershop
     </h1>
     <p class="hero-sub">
-      Precision cuts, crisp skin fades &amp; traditional hot towel shaves —
+      Precision cuts, crisp skin fades &amp; traditional hot towel shaves,
       serving Grandville with old-school craftsmanship for over 65 years.
     </p>
     <div class="hero-btns">
       <a href="tel:6164858187" class="btn btn-book">
-        ✂&nbsp; Walk-Ins Welcome — Call Us
+        ✂&nbsp; Walk-Ins Welcome - Call Us
       </a>
       <a href="#services" class="btn btn-outline">
         View Services
@@ -930,7 +942,7 @@
       <div class="stat-lbl">65+ Years Serving</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">$12–$25</div>
+      <div class="stat-num">$12-$25</div>
       <div class="stat-lbl">Affordable Pricing</div>
     </div>
   </div>
@@ -954,7 +966,7 @@
           <span class="menu-icon">✂️</span>
           <div>
             <span class="menu-name">Regular Haircut</span>
-            <span class="menu-sub">All hair types &mdash; hot lather neck shave included</span>
+            <span class="menu-sub">All hair types - hot lather neck shave included</span>
           </div>
         </div>
         <div class="menu-dots"></div>
@@ -982,7 +994,7 @@
           <span class="menu-icon">👦</span>
           <div>
             <span class="menu-name">Kids Cut <span style="font-size:0.75rem; font-weight:400; color:var(--text-muted); letter-spacing:0.02em;">(10 &amp; Under)</span></span>
-            <span class="menu-sub">Patient, gentle &amp; quick &mdash; kids love it here</span>
+            <span class="menu-sub">Patient, gentle &amp; quick - kids love it here</span>
           </div>
         </div>
         <div class="menu-dots"></div>
@@ -996,7 +1008,7 @@
           <span class="menu-icon">👴</span>
           <div>
             <span class="menu-name">Senior Cut <span style="font-size:0.75rem; font-weight:400; color:var(--text-muted); letter-spacing:0.02em;">(65 &amp; Over)</span></span>
-            <span class="menu-sub">We honor our elders &mdash; always</span>
+            <span class="menu-sub">We honor our elders, always</span>
           </div>
         </div>
         <div class="menu-dots"></div>
@@ -1010,7 +1022,7 @@
           <span class="menu-icon">🎖️</span>
           <div>
             <span class="menu-name">Military Cut</span>
-            <span class="menu-sub">Active duty &amp; veterans &mdash; thank you for your service</span>
+            <span class="menu-sub">Active duty &amp; veterans - thank you for your service</span>
           </div>
         </div>
         <div class="menu-dots"></div>
@@ -1024,7 +1036,7 @@
           <span class="menu-icon">🪒</span>
           <div>
             <span class="menu-name">Beard Trim &amp; Line Up</span>
-            <span class="menu-sub">Sharp edges, defined lines &mdash; add-on with any cut</span>
+            <span class="menu-sub">Sharp edges, defined lines - add-on with any cut</span>
           </div>
         </div>
         <div class="menu-dots"></div>
@@ -1045,7 +1057,7 @@
     <div class="about-grid">
       <!-- image -->
       <div class="about-img-wrap reveal">
-        <div class="about-badge-img" aria-hidden="true">Est. 1961 &mdash; Grandville, MI</div>
+        <div class="about-badge-img" aria-hidden="true">Est. 1961 - Grandville, MI</div>
         <img
           src="2025-08-07.jpg"
           alt="Barber at work at Grandville Barbershop"
@@ -1061,20 +1073,20 @@
         <h2 class="section-title">Meet Cindy<br>&amp; The Team</h2>
 
         <p>
-          Grandville Barbershop has been a cornerstone of this community since <strong>1961</strong> — over
+          Grandville Barbershop has been a cornerstone of this community since <strong>1961</strong>, over
           65 years of sharp fades, classic cuts, and old-school craftsmanship on Chicago Drive. Owner Cindy
           and her team carry on that tradition every single day, delivering the kind of consistent,
           quality work that keeps customers coming back for years.
         </p>
         <p>
-          Step inside and you'll feel it immediately — warm atmosphere, no pretense, just skilled barbers
+          Step inside and you'll feel it immediately: warm atmosphere, no pretense, just skilled barbers
           who listen and get it right. We cut all hair types, love kids, and walk-ins are always welcome.
           No appointment? No problem.
         </p>
 
         <blockquote class="blockquote">
           <p>"My husband has been getting his haircut from Cindy for over 4 years now and refuses to go anywhere else!!"</p>
-          <cite>— Samantha S., Verified Google Review ★★★★★</cite>
+          <cite>- Samantha S., Verified Google Review ★★★★★</cite>
         </blockquote>
 
         <div class="feat-grid">
@@ -1087,7 +1099,7 @@
         </div>
 
         <a href="tel:6164858187" class="btn btn-book">
-          ✂&nbsp; Walk-Ins Welcome — Call Us
+          ✂&nbsp; Walk-Ins Welcome - Call Us
         </a>
       </div>
     </div>
@@ -1106,11 +1118,11 @@
     </div>
 
     <div class="gallery-grid">
-      <!-- Featured large image — shop interior atmosphere -->
+      <!-- Featured large image - shop interior atmosphere -->
       <div class="gal-item gal-feat reveal">
         <img
           src="2024-11-05.jpg"
-          alt="Classic barbershop interior at Grandville Barbershop — Est. 1961"
+          alt="Classic barbershop interior at Grandville Barbershop - Est. 1961"
           loading="lazy"
         />
         <div class="gal-overlay"><span class="gal-lbl">Classic Shop Vibes Since 1961</span></div>
@@ -1119,7 +1131,7 @@
       <div class="gal-item reveal reveal-delay-1">
         <img
           src="2025-10-24-2.jpg"
-          alt="Textured taper fade haircut — Grandville Barbershop"
+          alt="Textured taper fade haircut - Grandville Barbershop"
           loading="lazy"
         />
         <div class="gal-overlay"><span class="gal-lbl">Taper Fade</span></div>
@@ -1128,7 +1140,7 @@
       <div class="gal-item reveal reveal-delay-2">
         <img
           src="2024-10-22.jpg"
-          alt="Clean taper fade from behind — Grandville Barbershop"
+          alt="Clean taper fade from behind - Grandville Barbershop"
           loading="lazy"
         />
         <div class="gal-overlay"><span class="gal-lbl">Skin Fade</span></div>
@@ -1146,7 +1158,7 @@
       <div class="gal-item reveal reveal-delay-2">
         <img
           src="2026-02-21-2.jpg"
-          alt="Curly fade haircut — Grandville Barbershop"
+          alt="Curly fade haircut - Grandville Barbershop"
           loading="lazy"
         />
         <div class="gal-overlay"><span class="gal-lbl">All Hair Types</span></div>
@@ -1155,7 +1167,7 @@
       <div class="gal-item reveal reveal-delay-3">
         <img
           src="FCD5BFDC-1E15-4E80-9A9E-A970FCF5FECE.jpeg"
-          alt="Flat top haircut in warm shop interior — Grandville Barbershop"
+          alt="Flat top haircut in warm shop interior - Grandville Barbershop"
           loading="lazy"
         />
         <div class="gal-overlay"><span class="gal-lbl">Flat Top</span></div>
@@ -1241,27 +1253,27 @@
           <tbody>
             <tr>
               <td>Monday</td>
-              <td>9:00 AM – 1:00 PM</td>
+              <td>9:00 AM - 1:00 PM</td>
             </tr>
             <tr>
               <td>Tuesday</td>
-              <td>9:00 AM – 6:00 PM</td>
+              <td>9:00 AM - 6:00 PM</td>
             </tr>
             <tr>
               <td>Wednesday</td>
-              <td>9:00 AM – 6:00 PM</td>
+              <td>9:00 AM - 6:00 PM</td>
             </tr>
             <tr>
               <td>Thursday</td>
-              <td>9:00 AM – 6:00 PM</td>
+              <td>9:00 AM - 6:00 PM</td>
             </tr>
             <tr>
               <td>Friday</td>
-              <td>9:00 AM – 5:00 PM</td>
+              <td>9:00 AM - 5:00 PM</td>
             </tr>
             <tr>
               <td>Saturday</td>
-              <td>9:00 AM – 1:00 PM</td>
+              <td>9:00 AM - 1:00 PM</td>
             </tr>
             <tr>
               <td>Sunday</td>
@@ -1308,7 +1320,7 @@
         </div>
 
         <a href="tel:6164858187" class="btn btn-book" style="width:100%; margin-top:1.25rem;">
-          ✂&nbsp; Walk-Ins Welcome &mdash; Call (616) 485-8187
+          ✂&nbsp; Walk-Ins Welcome - Call (616) 485-8187
         </a>
       </div>
     </div>
@@ -1329,7 +1341,7 @@
     <a href="tel:6164858187">Call Now</a>
     <a href="https://www.facebook.com/profile.php?id=100063546554535" target="_blank" rel="noopener noreferrer">Facebook</a>
   </nav>
-  <div class="foot-copy">&copy; 2026 Grandville Barbershop &mdash; Est. 1961. All Rights Reserved. Unauthorized reproduction of this site is prohibited.</div>
+  <div class="foot-copy">&copy; 2026 Grandville Barbershop - Est. 1961. All Rights Reserved. Unauthorized reproduction of this site is prohibited.</div>
 </footer>
 
 <!-- ============================
@@ -1373,10 +1385,13 @@
      HERO PARALLAX (subtle)
   -------------------------------------------------- */
   var heroBg = document.getElementById('heroBg');
+  var heroBg2 = document.getElementById('heroBg2');
   if (heroBg && window.innerWidth > 768) {
     window.addEventListener('scroll', function () {
       var scrolled = window.scrollY;
-      heroBg.style.transform = 'scale(1.06) translateY(' + (scrolled * 0.22) + 'px)';
+      var t = 'scale(1.06) translateY(' + (scrolled * 0.22) + 'px)';
+      heroBg.style.transform = t;
+      if (heroBg2) heroBg2.style.transform = t;
     }, { passive: true });
   }
 
@@ -1458,7 +1473,7 @@
     // Also print once on load for extra deterrence
     setTimeout(function () {
       console.log(
-        '%c⛔  © 2026 Grandville Barbershop — All Rights Reserved. This code is proprietary.',
+        '%c⛔  © 2026 Grandville Barbershop - All Rights Reserved. This code is proprietary.',
         'color:#c8a45a;font-weight:bold;font-size:12px;'
       );
     }, 800);
