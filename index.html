@@ -177,10 +177,29 @@
       letter-spacing: 0.18em;
       text-transform: uppercase;
     }
-
-    /* =============================================
-       NAVIGATION
-    ============================================= */
+    .notice-ribbon {
+      background: #1a1a1a;
+      color: #f5c842;
+      text-align: center;
+      padding: 0.7rem 1rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-bottom: 2px solid #f5c842;
+    }
+    .hours-notice {
+      margin-top: 1rem;
+      background: rgba(245,200,66,0.08);
+      border: 1px solid rgba(245,200,66,0.5);
+      border-radius: 6px;
+      padding: 0.85rem 1rem;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: #e8e8e8;
+    }
+    .hours-notice strong { color: #f5c842; display: block; margin-bottom: 0.3rem; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
     .navbar {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -893,6 +912,9 @@
 <div class="ribbon" aria-label="Walk-ins welcome announcement">
   💈&nbsp; Walk-Ins Always Welcome - Stop By Or Call Ahead &nbsp;💈
 </div>
+<div class="notice-ribbon" aria-label="Special holiday hours notice">
+  ⚠️&nbsp; Special Hours This Week: Open Mon May 18 (9AM-5PM) &nbsp;·&nbsp; Closed Thu May 21 - Sat May 23 for Holiday Weekend &nbsp;·&nbsp; Regular Hours Resume Tue May 26 &nbsp;⚠️
+</div>
 
 <!-- ============================
      NAVIGATION
@@ -1284,6 +1306,13 @@
             </tr>
           </tbody>
         </table>
+
+        <div class="hours-notice">
+          <strong>Special Hours - Week of May 18</strong>
+          Mon May 18: Open 9:00 AM - 5:00 PM (Holiday Special)<br>
+          Thu May 21 - Sat May 23: Closed for Holiday Weekend<br>
+          Regular hours resume Tuesday, May 26.
+        </div>
 
         <div class="loc-info allow-select">
           <div class="loc-item">
